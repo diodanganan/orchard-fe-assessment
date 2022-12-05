@@ -7,5 +7,5 @@ import './sass/app.scss';
 
 const rootApp = document.getElementById('root');
 
-const root = createRoot(rootApp); // createRoot(container!) if you use TypeScript
+const root = createRoot(rootApp);
 root.render(<App tab="home" />);
