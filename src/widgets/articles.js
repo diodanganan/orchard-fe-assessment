@@ -23,6 +23,11 @@ const posts = [
 ];
 
 const Articles = () => {
+    /**
+     * 
+     * @param {*} event - handles click event of the a tag
+     * @param {*} index - integer - identifies which article has been clicked.
+     */
     const clickHandler = (event, index) => {
         event.preventDefault();
         console.log("Article " + (index + 1) + " has been clicked.");
