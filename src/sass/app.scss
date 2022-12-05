@@ -1,0 +1,234 @@
+@use "global" as *;
+
+/**
+    Styling for the UI. 
+    Handles screen sizes up to 330px
+*/
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-family-body);
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 25px 0 50px 0;
+    gap: 25px;
+
+    &:nth-of-type(3) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @include sm {
+        justify-content: center;
+        align-items: center;
+        // margin: 185px 0 190px 0;
+        gap: 25px;
+    }
+
+    @include md {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 185px 0 190px 0;
+        gap: 25px;
+    }
+
+    @include lg {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 185px 0 245px 0;
+        gap: 25px;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-100);
+    @include lg {
+       margin-bottom: 75px;
+    }
+}
+
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    gap: 20px;
+    .image-lg {
+        background: no-repeat center;
+        background-size: cover;
+        height: 600px;
+    }
+
+    .image-md {
+        background: no-repeat center;
+        background-size: cover;
+        height: 290px;
+    }
+
+    h4 {
+        margin: 0;
+        padding: 5px 0 15px 0;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--color-white);
+        font-size: 1.65rem;
+        font-weight: var(--font-weight-100);
+    }
+
+    p {
+        font-size: 18px;
+        margin-top: 0;
+        color: var(--color-gray);
+    }
+    @include sm {
+        width: 100%;
+        max-width: 450px;
+        // width: calc(100% / 3);
+    }
+
+    @include md {
+        width: calc(100% / 3);
+    }
+
+    @include lg {
+        width: calc(100% / 3);
+    }
+}
+
+.feature-subcontent {
+    p {
+        margin-top: 20px;
+        color: var(--color-white);
+        font-weight: var(--font-weight-bold);
+    }
+    span {
+        color: var(--color-red);
+        font-weight: var(--font-weight-bold);
+    }
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 120px 0;
+    gap: 25px;
+
+    @include sm {
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    @include md {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    @include lg {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 25px;
+    }
+}
+
+.articles-item {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 20px;
+    div {
+        background: no-repeat center;
+        background-size: cover;
+        border-bottom: 3px solid var(--image-accent);
+        height: 290px;
+    }
+
+    h4 {
+        text-transform: capitalize;
+        margin: 28px 0 10px 0;
+        font-size: 18px;
+    }
+
+    a {
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ff0000;
+    }
+
+    p {
+        margin-bottom: 35px;
+    }
+
+    @include sm {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    @include md {
+        width: calc(100% / 3);
+    }
+
+    @include lg {
+        width: calc(100% / 3);
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+    padding: 40px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 0;
+
+    .image-md {
+        background: no-repeat center;
+        background-size: contain;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+.close {
+    color: var(--color-white);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 5px 10px 0 0;
+
+    img {
+        width: 30px;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--color-gray);
+        text-decoration: none;
+        cursor: pointer;
+    }
+}

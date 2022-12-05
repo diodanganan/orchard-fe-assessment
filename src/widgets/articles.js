@@ -30,10 +30,10 @@ const Articles = () => {
     return (
         <>
             <h1>ALL THE LATEST FROM AEG</h1>
-            <div>
+            <div className="articles">
                 {posts.map((post, index) => (
-                    <div key={index}>
-                        <img src = {post.image} />
+                    <div className="articles-item" key={index}>
+                        <div style={{ backgroundImage: `url(${post.image})` }} />
                         <h4>{post.title}</h4>
                         <p>{post.content}</p>
                         <a href="#" onClick={(event) => clickHandler(event, index)}>

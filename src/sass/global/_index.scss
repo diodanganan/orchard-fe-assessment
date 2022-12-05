@@ -1,0 +1,5 @@
+@forward 'normalize'; // use normalize css to reset all browser defaults
+@forward 'mixin'; // handles screen sizes to be used in app.scss
+@forward 'colors'; // handles global colors
+@forward 'variables'; // handles variables to be used in app.scss
+@forward 'typography'; // handles commonly used typography setups

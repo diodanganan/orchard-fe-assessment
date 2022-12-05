@@ -1,0 +1,16 @@
+@use 'typography' as *;
+@use 'colors' as *;
+
+:root {
+    --color-content: var(--color-gray);
+    --color-heading: var(--color-white);
+    --image-accent: var(--color-red-light); 
+    --font-family-heading: 'Open Sans Condensed', sans-serif;
+    --font-family-body: 'Open Sans', sans-serif;
+    --font-weight-bold: 700;
+    --font-weight-regular: 400;
+    --font-weight-100: 100;
+    --screen-sm: 640px;
+    --screen-md: 768px;
+    --screen-lg: 1024px;
+}
